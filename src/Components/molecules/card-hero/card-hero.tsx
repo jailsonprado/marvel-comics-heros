@@ -28,14 +28,10 @@ export const CardHero: React.FC<CardHeroProps> = ({
     <S.Wrapper>
       <S.Container>
         <S.WrapperImage>
-          <Image
+          <S.ImageCard
             descriptionAlt={altImage}
             src={source}
-            width={200}
-            height={200}
-            maxHeight={200}
             handleClick={() => navigateTo(id)}
-            cursor="pointer"
           />
         </S.WrapperImage>
         <S.TextContainer>

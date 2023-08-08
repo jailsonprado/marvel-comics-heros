@@ -27,6 +27,8 @@ export const SearchHero: React.FC<NavBarProps> = ({ value, handleChange }) => {
         value={inputValue}
         onChange={handleInputChange}
         data-testid="search"
+        placeholder="Procure por heróis"
+        autoFocus
       />
     </S.StyledSearch>
   );

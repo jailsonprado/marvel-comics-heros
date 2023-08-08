@@ -14,6 +14,6 @@ export const GridContainer = styled.div`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
