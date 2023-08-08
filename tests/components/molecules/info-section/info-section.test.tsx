@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { InfoSection } from '@/components/molecules/info-section/info-section';
+import { InfoSection } from '@/components/molecules';
 import { waitFor } from '@testing-library/dom';
 
 describe('InfoSection component', () => {

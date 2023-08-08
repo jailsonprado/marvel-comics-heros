@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@/tests/test-utils';
 import { CardHero } from '@/components/molecules';
-import { waitFor } from '@testing-library/dom';
 
 describe('CardHero component', () => {
   const mockProps = {
@@ -36,15 +35,13 @@ describe('CardHero component', () => {
     expect(mockProps.handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should call handleClick navigateTo', () => {
+  it('should call navigateTo when card is clicked', () => {
     render(<CardHero {...mockProps} />);
 
-    const navigateButton = screen.getByAltText('Hero Image');
-    fireEvent.click(navigateButton);
+    const cardElement = screen.getByAltText('Hero Image');
+    fireEvent.click(cardElement);
 
-    waitFor(() => {
-      expect(mockProps.navigateTo).toHaveBeenCalledTimes(1);
-    });
+    expect(mockProps.navigateTo).toHaveBeenCalledTimes(1);
   });
 
   it('should call handleRemove when favorite logo is favorited', () => {
