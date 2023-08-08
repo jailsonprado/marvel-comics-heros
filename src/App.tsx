@@ -1,12 +1,16 @@
-import "./App.css";
-import { AppProvider } from "./hooks/request-data";
-import { List } from "./pages/List";
+import { HookProvider } from '@/context';
+import './App.css';
+import { Provider } from 'react-redux';
+import { store } from '@/redux/store';
+import RoutesManager from './routes';
 
 function App() {
   return (
-    <AppProvider>
-      <List />
-    </AppProvider>
+    <Provider store={store}>
+      <HookProvider>
+        <RoutesManager />
+      </HookProvider>
+    </Provider>
   );
 }
 
