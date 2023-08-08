@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@/tests/test-utils';
+import { render, screen, fireEvent } from '@/test-utils';
 import { CardHero } from '@/components/molecules';
 import { waitFor } from '@testing-library/dom';
 

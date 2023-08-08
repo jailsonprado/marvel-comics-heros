@@ -1,4 +1,4 @@
-import { renderHook, act, HooksProviders } from '@/tests/test-utils';
+import { renderHook, act, HooksProviders } from '@/test-utils';
 import useDebounce from '@/hooks/use-debounce/use-debounce';
 
 jest.useFakeTimers();

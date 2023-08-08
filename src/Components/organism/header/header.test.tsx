@@ -1,4 +1,4 @@
-import { render, screen } from '@/tests/test-utils';
+import { render, screen } from '@/test-utils';
 import { Header } from '@/components/organism';
 
 test('renders Header component', () => {

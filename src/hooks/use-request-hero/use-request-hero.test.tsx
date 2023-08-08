@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HooksProviders, renderHook } from '@/tests/test-utils';
+import { HooksProviders, renderHook } from '@/test-utils';
 import axios from 'axios';
 
 import { waitFor } from '@testing-library/dom';

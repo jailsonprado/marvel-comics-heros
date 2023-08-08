@@ -1,7 +1,8 @@
 module.exports = {
-  roots: ['<rootDir>/src', '<rootDir>/tests'],
+  roots: ['<rootDir>/src'],
   coverageDirectory: 'coverage',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  testMatch: ['<rootDir>/src/**/?(*.)test.{ts,tsx}'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/cypress/',
@@ -15,11 +16,10 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   moduleNameMapper: {
-    '@/tests/(.*)': '<rootDir>/tests/$1',
     '@/(.*)': '<rootDir>/src/$1',
     '^.+\\.svg': '<rootDir>/mocks/fileMock.jsx',
-    '^@components/(.*)$': '<rootDir>/src/components/$1',
   },
+  moduleDirectories: ['node_modules', 'src', 'utils'],
   coverageDirectory: 'reports/coverage',
   collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
   coveragePathIgnorePatterns: [

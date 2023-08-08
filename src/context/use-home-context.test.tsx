@@ -1,4 +1,4 @@
-import { renderHook } from '@/tests/test-utils';
+import { renderHook } from '@/test-utils';
 import { useHomeContext } from '@/context/useHomeContext';
 import { HomeContext } from '@/context';
 

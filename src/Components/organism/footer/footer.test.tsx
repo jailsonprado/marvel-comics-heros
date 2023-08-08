@@ -1,4 +1,4 @@
-import { render, screen } from '@/tests/test-utils';
+import { render, screen } from '@/test-utils';
 import { Footer } from '@/components/organism';
 
 test('renders Footer component', () => {
