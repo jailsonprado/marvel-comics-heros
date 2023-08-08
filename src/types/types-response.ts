@@ -1,6 +1,6 @@
 export interface Payload {
   data: {
-    results: Character[];
+    results: CharacterPaylod[];
     offset: string;
     total: string;
   };
@@ -11,30 +11,35 @@ export interface AppContextProps {
   onSearchHero(textSearch: string): void;
   onPaginate(page: number): void;
   attributionText: string;
-  characters: Character[];
+  characters: CharacterPaylod[];
   pageInfo: { page: string; total: string };
   loading: boolean;
 }
 
-export interface Character {
-  id: string;
+export interface CharacterPaylod {
+  id: number;
   name: string;
   description: string;
   thumbnail: Thumbnail;
-  comics: Details;
-  series: Details;
-  stories: Details;
-  events: Details;
-  urls: Url[];
+  comics?: Details;
 }
 
-interface Thumbnail {
+export interface CharacterPaylodUnique extends CharacterPaylod {
+  comics?: Details;
+  modified?: string;
+  series: {
+    available: number;
+  };
+}
+
+export interface Thumbnail {
   path: string;
   extension: string;
 }
 
 interface Details {
   items: Item[];
+  available: number;
 }
 
 interface Item {
@@ -42,7 +47,14 @@ interface Item {
   type: string;
 }
 
-interface Url {
-  type: string;
-  url: string;
+export interface Comics {
+  id: number;
+  name: string;
+  description: string;
+  thumbnail: Thumbnail;
+  comics: Details;
+  modified: string;
+  series?: {
+    available: number;
+  };
 }
