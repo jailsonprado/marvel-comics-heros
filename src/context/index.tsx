@@ -34,6 +34,7 @@ export const HookProvider = ({ children }: HookProps) => {
     setTimeRequest(timeApi);
     setKey(publicKeyApi);
     setHashApi(hashApi);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [publicKey]);
 
   return (
