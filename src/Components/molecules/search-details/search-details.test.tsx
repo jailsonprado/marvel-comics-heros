@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { SearchHeroDetails } from '@/components/molecules';
+import { SearchHeroDetails } from './search-details';
 describe('SearchHeroDetails component', () => {
   const mockHandleChange = jest.fn();
   const mockPlaceholder = 'Search heroes...';

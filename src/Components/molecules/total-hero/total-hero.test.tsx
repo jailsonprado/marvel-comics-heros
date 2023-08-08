@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { TotalHero } from '@/components/molecules';
+import { TotalHero } from './total-hero';
 
 describe('TotalHero', () => {
   it('should render the component with the correct text', () => {

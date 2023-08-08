@@ -1,5 +1,5 @@
 import { render, screen } from '@/test-utils';
-import { Header } from '@/components/organism';
+import { Header } from './header';
 
 test('renders Header component', () => {
   render(<Header />);

@@ -1,5 +1,5 @@
 import { render, screen } from '@/test-utils';
-import { Footer } from '@/components/organism';
+import { Footer } from './footer';
 
 test('renders Footer component', () => {
   render(<Footer />);

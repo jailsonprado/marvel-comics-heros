@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@/test-utils';
-import { CardHero } from '@/components/molecules';
+import { CardHero } from './card-hero';
 import { waitFor } from '@testing-library/dom';
 
 describe('CardHero component', () => {

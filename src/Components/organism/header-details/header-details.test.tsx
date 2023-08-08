@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { HeaderDetails } from '@/components/organism';
+import { HeaderDetails } from './header-details';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

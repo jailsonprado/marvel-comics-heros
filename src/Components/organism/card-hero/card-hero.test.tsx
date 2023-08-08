@@ -1,7 +1,7 @@
 import { CharacterPaylod } from '@/types/types-response';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { CardHeroComponent } from '@/components/organism';
+import { CardHeroComponent } from './card-hero';
 
 import {
   addToFavoriteHero,

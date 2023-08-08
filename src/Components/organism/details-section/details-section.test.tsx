@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import { DetailsSection } from '@/components/organism/details-section/details-section';
+import { DetailsSection } from './details-section';
 import { addToFavoriteHero } from '@/redux/heros/heros-slice';
 import { CharacterPaylodUnique, Comics } from '@/types/types-response';
 import { waitFor } from '@testing-library/dom';

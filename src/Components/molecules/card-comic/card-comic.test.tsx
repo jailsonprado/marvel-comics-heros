@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { ComicCard } from '@/components/molecules';
+import { ComicCard } from './card-comic';
 
 describe('ComicCard component', () => {
   const defaultProps = {

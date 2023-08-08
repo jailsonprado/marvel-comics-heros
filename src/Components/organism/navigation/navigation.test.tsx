@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Navigation } from '@/components/organism';
+import { Navigation } from './navigation';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 
