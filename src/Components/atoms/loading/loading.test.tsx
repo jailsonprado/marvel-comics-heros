@@ -1,4 +1,4 @@
-import { Loading } from '@/components/atoms';
+import { Loading } from './loading';
 
 import { render, screen } from '@testing-library/react';
 

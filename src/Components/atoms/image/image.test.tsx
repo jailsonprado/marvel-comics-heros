@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Image } from '@/components/atoms/image/image';
-import { ImageProps } from '@/components/atoms/image/types';
+import { Image } from './image';
+import { ImageProps } from './types';
 
 describe('Image Component', () => {
   const defaultProps: ImageProps = {

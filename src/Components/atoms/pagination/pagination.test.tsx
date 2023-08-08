@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Pagination } from './pagination';
-import { calculatePagesToShow } from '@/components/atoms/pagination/utils/pagination.utils';
+import { calculatePagesToShow } from './utils/pagination.utils';
 import { waitFor } from '@testing-library/dom';
 
 describe('calculatePagesToShow', () => {
