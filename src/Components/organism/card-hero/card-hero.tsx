@@ -26,9 +26,11 @@ export const CardHeroComponent: React.FC<Props> = ({ data }) => {
   const handleRemoveFavoriteHero = (hero: CharacterPaylod) => {
     dispatch(removeFromFavoriteHero(hero.id));
   };
+
   const handleCardClick = (id: number) => {
     navigate(`/comics/${id}`);
   };
+
   return (
     <S.GridContainer>
       {data.map((item: CharacterPaylod) => {
