@@ -4,6 +4,11 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['module-name'],
+    },
+  },
   server: {
     proxy: {
       '/graphql': 'http://localhost:3001',
