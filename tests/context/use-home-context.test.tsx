@@ -1,4 +1,3 @@
-// useHomeContext.test.tsx
 import { renderHook } from '@/tests/test-utils';
 import { useHomeContext } from '@/context/useHomeContext';
 import { HomeContext } from '@/context';

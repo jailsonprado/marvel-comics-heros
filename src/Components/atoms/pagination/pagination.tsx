@@ -1,4 +1,3 @@
-// pagination.tsx
 import * as S from './pagination.styles';
 import { calculatePagesToShow } from '@/components/atoms/pagination/utils/pagination.utils';
 

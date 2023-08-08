@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { HooksProviders, renderHook } from '@/tests/test-utils';
-import axios from 'axios'; // Import axios or your mock library
+import axios from 'axios';
 
 import { waitFor } from '@testing-library/dom';
 import { useRequestHero } from '@/hooks/use-request-hero/use-request-hero';

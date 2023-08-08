@@ -39,8 +39,7 @@ export function useRequestHero() {
       }
     };
 
-    // Call the API request only when the component is mounted
-    fetchHero(Number(id)); // Replace 123 with the actual ID you want to fetch
+    fetchHero(Number(id));
   }, [hash, id, publicKey, time]);
 
   return {

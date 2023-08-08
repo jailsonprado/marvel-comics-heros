@@ -1,4 +1,3 @@
-// menu-header.test.tsx
 import { render } from '@testing-library/react';
 import { Navigation } from '@/components/organism';
 import configureStore from 'redux-mock-store';

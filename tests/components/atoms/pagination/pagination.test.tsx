@@ -1,4 +1,3 @@
-// pagination.test.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Pagination } from '@/components/atoms';
 import { calculatePagesToShow } from '@/components/atoms/pagination/utils/pagination.utils';

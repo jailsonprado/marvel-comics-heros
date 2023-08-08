@@ -1,4 +1,3 @@
-// order-by-name.tsx
 import { Text, Image } from '@/components/atoms';
 import * as S from './order-by-name.styles';
 import { IcHeroiSvg, ToggleOffSvg, ToggleOnSvg } from '@/assets/svg/svg-mapped';

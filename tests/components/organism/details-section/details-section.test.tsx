@@ -6,7 +6,6 @@ import { addToFavoriteHero } from '@/redux/heros/heros-slice';
 import { CharacterPaylodUnique, Comics } from '@/types/types-response';
 import { waitFor } from '@testing-library/dom';
 
-// Mock the redux store
 const mockStore = configureStore([]);
 const store = mockStore({
   heroSlice: {

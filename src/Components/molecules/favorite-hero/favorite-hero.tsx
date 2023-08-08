@@ -1,4 +1,3 @@
-// favorite-hero.tsx
 import { useCallback, useEffect, useState } from 'react';
 import * as S from './favorite-hero.styles';
 import { Text, Image } from '@/components/atoms';

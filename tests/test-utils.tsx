@@ -7,7 +7,6 @@ import { HookProvider } from '@/context';
 import { Provider } from 'react-redux';
 import { store } from '@/redux/store';
 
-// Wrap all necessary providers here
 const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -20,7 +19,6 @@ const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// The main wrapper for the test, providing all necessary context and providers
 const customRender = (
   ui: React.ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
@@ -30,11 +28,9 @@ const customRender = (
 // eslint-disable-next-line import/export
 export * from '@testing-library/react';
 
-// Override render method with customRender
 // eslint-disable-next-line import/export
 export { customRender as render, AllTheProviders as HooksProviders };
 
-// Export custom axios mock adapter and its instance
 export const mockAxios = Object.assign(jest.fn(actualAxios), actualAxios);
 export const axiosAdapter = new AxiosMockAdapter(mockAxios, {
   delayResponse: 100,

@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
-import { DescriptionHero } from '@/components/molecules'; // Adjust the import path accordingly
+import { DescriptionHero } from '@/components/molecules';
 import { waitFor } from '@testing-library/dom';
 
 describe('DescriptionHero component', () => {
