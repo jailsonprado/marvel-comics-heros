@@ -1,16 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Details from "./pages/Details";
-
-import Home from "./pages/Home";
-import { HookProvider } from "./context";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HookProvider } from '@/context';
+import { HomePage } from '@/pages/home/home';
+import DetailsHeroPage from './pages/details-hero/details-hero';
 
 const RoutesManager = () => {
   return (
     <BrowserRouter>
       <HookProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/comics/:id" element={<Details />} />
+          <Route path="/comics/:id" element={<DetailsHeroPage />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </HookProvider>
     </BrowserRouter>
