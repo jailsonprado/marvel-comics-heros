@@ -4,6 +4,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
+    '<rootDir>/cypress/',
     '<rootDir>.*styles\\.ts$',
     '<rootDir>/src/main.tsx',
     '<rootDir>*types\\.ts$',
@@ -22,6 +23,7 @@ module.exports = {
   collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
   coveragePathIgnorePatterns: [
     '/node_modules/',
+    '/cypress/',
     '\\.style\\.tsx$',
     '\\.styles\\.tsx$',
     '\\.style\\.ts$',
