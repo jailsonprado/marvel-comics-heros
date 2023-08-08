@@ -4,6 +4,11 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      '/graphql': 'http://localhost:3001',
+    },
+  },
   resolve: {
     alias: {
       '@': '/src',

@@ -32,21 +32,29 @@ export function useMarvelData() {
     async (page: number) => {
       setLoading(true);
       try {
-        let apiEndpoint = `characters?offset=${page}&ts=${time}&apikey=${publicKey}&hash=${hash}&limit=${itemsPerPage}`;
+        if (
+          publicKey !== undefined &&
+          hash !== undefined &&
+          time !== undefined
+        ) {
+          let apiEndpoint = `characters?offset=${page}&ts=${time}&apikey=${publicKey}&hash=${hash}&limit=${itemsPerPage}`;
 
-        if (searchValue) {
-          apiEndpoint += `&nameStartsWith=${searchValue}`;
+          if (searchValue) {
+            apiEndpoint += `&nameStartsWith=${searchValue}`;
+          }
+          if (!toggleActive) {
+            apiEndpoint += `&orderBy=-name`;
+          }
+          if (publicKey !== undefined) {
+          }
+
+          const response = await api.get(apiEndpoint);
+
+          setData(response.data.data.results);
+          setTotalItems(response.data.data.total);
+          setTotalPages(Math.ceil(response.data.data.total / itemsPerPage));
+          setCurrentPage(page);
         }
-        if (!toggleActive) {
-          apiEndpoint += `&orderBy=-name`;
-        }
-
-        const response = await api.get(apiEndpoint);
-
-        setData(response.data.data.results);
-        setTotalItems(response.data.data.total);
-        setTotalPages(Math.ceil(response.data.data.total / itemsPerPage));
-        setCurrentPage(page);
       } catch (error) {
         setError(error as Error);
       } finally {

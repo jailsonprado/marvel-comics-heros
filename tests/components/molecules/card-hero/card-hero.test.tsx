@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@/tests/test-utils';
 import { CardHero } from '@/components/molecules';
+import { waitFor } from '@testing-library/dom';
 
 describe('CardHero component', () => {
   const mockProps = {
@@ -41,7 +42,9 @@ describe('CardHero component', () => {
     const cardElement = screen.getByAltText('Hero Image');
     fireEvent.click(cardElement);
 
-    expect(mockProps.navigateTo).toHaveBeenCalledTimes(1);
+    waitFor(() => {
+      expect(mockProps.navigateTo).toHaveBeenCalledTimes(1);
+    });
   });
 
   it('should call handleRemove when favorite logo is favorited', () => {

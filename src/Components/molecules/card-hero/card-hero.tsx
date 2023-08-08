@@ -26,12 +26,13 @@ export const CardHero: React.FC<CardHeroProps> = ({
 }) => {
   return (
     <S.Wrapper>
-      <S.Container>
-        <S.WrapperImage>
+      <S.Container data-testid="hero-card">
+        <S.WrapperImage data-testid="card-image" onClick={() => navigateTo(id)}>
           <S.ImageCard
             descriptionAlt={altImage}
             src={source}
             handleClick={() => navigateTo(id)}
+            data-testid="image-hero"
           />
         </S.WrapperImage>
         <S.TextContainer>

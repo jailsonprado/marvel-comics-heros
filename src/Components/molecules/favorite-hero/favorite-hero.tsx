@@ -23,7 +23,7 @@ export const FavoriteHero: React.FC = () => {
   }, [favorite, handleActiveListFavorite]);
 
   return (
-    <S.WrapperItem>
+    <S.WrapperItem data-testid="only-favorite">
       <Image
         src={!favorite ? Favorito02Svg : Favorito01Svg}
         descriptionAlt={!favorite ? 'favorito02-icon' : 'favorito01-icon'}
