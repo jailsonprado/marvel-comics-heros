@@ -1,4 +1,4 @@
-import { Image, Text } from '@/components/atoms';
+import { Image, Text } from '../../atoms';
 import * as S from './loading.styles';
 import { DeadPool } from '@/assets/svg/svg-mapped';
 

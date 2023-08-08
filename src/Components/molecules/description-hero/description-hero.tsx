@@ -1,5 +1,5 @@
 import { Favorito01Svg, Favorito02Svg } from '@/assets/svg/svg-mapped';
-import { Image, Text } from '@/components/atoms';
+import { Image, Text } from '../../atoms';
 import * as S from './description-hero.styles';
 
 interface Props {

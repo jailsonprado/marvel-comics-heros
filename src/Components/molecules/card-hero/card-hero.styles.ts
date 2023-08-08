@@ -1,4 +1,4 @@
-import { Image } from '@/components/atoms';
+import { Image } from '../../atoms';
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`

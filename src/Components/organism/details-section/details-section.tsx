@@ -1,9 +1,5 @@
-import {
-  InfoSection,
-  DescriptionHero,
-  ComicCard,
-} from '@/components/molecules';
-import { Image, Loading, Text } from '@/components/atoms';
+import { InfoSection, DescriptionHero, ComicCard } from '../../molecules';
+import { Image, Loading, Text } from '../../atoms';
 import * as S from './detaisl-section.styles';
 import { useAppDispatch, useAppSelector } from '@/redux/types/types';
 import {

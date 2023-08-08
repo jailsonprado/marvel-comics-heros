@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import * as S from './favorite-hero.styles';
-import { Text, Image } from '@/components/atoms';
+import { Text, Image } from '../../atoms';
 import { listOnlyFavorites } from '@/redux/heros/heros-slice';
 import { Favorito01Svg, Favorito02Svg } from '@/assets/svg/svg-mapped';
 import { useAppDispatch } from '@/redux/types/types';

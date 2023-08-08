@@ -1,4 +1,4 @@
-import { Text, Image } from '@/components/atoms';
+import { Text, Image } from '../../atoms';
 import * as S from './order-by-name.styles';
 import { IcHeroiSvg, ToggleOffSvg, ToggleOnSvg } from '@/assets/svg/svg-mapped';
 import { useState } from 'react';

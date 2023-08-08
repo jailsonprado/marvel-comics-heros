@@ -1,5 +1,5 @@
 import * as S from './navigation.styles';
-import { OrderByName, FavoriteHero, TotalHero } from '@/components/molecules';
+import { OrderByName, FavoriteHero, TotalHero } from '../../molecules';
 
 interface Props {
   itemPerPage: number;

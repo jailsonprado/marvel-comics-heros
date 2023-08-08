@@ -1,7 +1,7 @@
 import * as S from './card-hero.styles';
 
 import { Favorito01Svg, Favorito02Svg } from '@/assets/svg/svg-mapped';
-import { Text, Image } from '@/components/atoms';
+import { Text, Image } from '../../atoms';
 
 interface CardHeroProps {
   source: string;

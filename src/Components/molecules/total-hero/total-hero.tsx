@@ -1,5 +1,5 @@
 import * as S from './total-hero.styles';
-import { Text } from '@/components/atoms';
+import { Text } from '../../atoms';
 
 interface Props {
   itemPerPage: number;

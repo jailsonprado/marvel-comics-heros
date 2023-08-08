@@ -1,4 +1,4 @@
-import { Text } from '@/components/atoms';
+import { Text } from '../../atoms';
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`

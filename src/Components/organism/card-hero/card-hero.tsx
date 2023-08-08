@@ -4,7 +4,7 @@ import {
 } from '@/redux/heros/heros-slice';
 import { useAppDispatch, useAppSelector } from '@/redux/types/types';
 import { CharacterPaylod } from '@/types/types-response';
-import { CardHero } from '@/components/molecules';
+import { CardHero } from '../../molecules';
 import * as S from './card-hero.styles';
 import { useNavigate } from 'react-router-dom';
 

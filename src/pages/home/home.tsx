@@ -3,9 +3,9 @@ import {
   Navigation,
   CardHeroComponent,
   Footer,
-} from '@/components/organism';
-import { Loading, Pagination } from '@/components/atoms';
-import { SearchHero } from '@/components/molecules';
+} from 'components/organism';
+import { Loading, Pagination } from 'components/atoms';
+import { SearchHero } from 'components/molecules';
 import { useMarvelData } from '@/hooks/use-marvel-data/use-marvel-data';
 import { useAppSelector } from '@/redux/types/types';
 import * as S from './styles';
