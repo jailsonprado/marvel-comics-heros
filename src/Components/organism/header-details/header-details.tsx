@@ -1,7 +1,7 @@
 import { LogoMenorSvg } from '@/assets/svg/svg-mapped';
-import { Image } from '../../atoms';
+import { Image } from '../../atoms/image/image';
 import * as S from './header-details.styles';
-import { SearchHeroDetails } from '../../molecules';
+import { SearchHeroDetails } from '../../molecules/search-details/search-details';
 import { useNavigate } from 'react-router-dom';
 
 export const HeaderDetails: React.FC = () => {

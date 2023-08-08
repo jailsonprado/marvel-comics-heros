@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { HeaderDetails } from 'components/organism/header-details/header-details';
-import { Footer } from 'components/organism/footer/footer';
-import { DetailsSection } from 'components/organism/details-section/details-section';
+import { HeaderDetails, Footer } from '@/components/organism';
+import { DetailsSection } from '@/components/organism/details-section/details-section';
 
 import * as S from './details-hero.styles';
 import { useRequestComics } from '@/hooks/use-request-comics/use-request-comics';
