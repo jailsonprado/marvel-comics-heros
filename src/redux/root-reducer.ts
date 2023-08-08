@@ -1,5 +1,5 @@
-import { combineReducers } from "redux";
-import heroSlice from "@/redux/heros/heros-slice";
+import { combineReducers } from 'redux';
+import heroSlice from '@/redux/heros/heros-slice';
 
 const rootReducer = combineReducers({
   heroSlice,

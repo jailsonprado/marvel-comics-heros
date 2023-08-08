@@ -1,5 +1,5 @@
-import md5 from "md5";
-import React, { createContext, useEffect, useState } from "react";
+import md5 from 'md5';
+import { createContext, useEffect, useState } from 'react';
 
 interface HookProps {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ type Props = {
 
 const InitialsValue = {
   time: 0,
-  publicKey: "",
-  hash: "",
+  publicKey: '',
+  hash: '',
 };
 
 export const HomeContext = createContext<Props>(InitialsValue);
@@ -25,8 +25,9 @@ export const HookProvider = ({ children }: HookProps) => {
   const [hash, setHashApi] = useState<string>();
 
   const timeApi = Number(new Date());
-  const privateKey = "";
-  const publicKeyApi = "";
+
+  const privateKey = 'a2d0927ae7143a3ab8c7b7b6b6993b3b27250fe4';
+  const publicKeyApi = 'b3880a065a6984f95c2e51cdbdc9cc5a';
   const hashApi = md5(timeApi + privateKey + publicKeyApi);
 
   useEffect(() => {

@@ -1,6 +1,6 @@
-import { useContext } from "react"
-import { HomeContext } from "."
+import { useContext } from 'react';
+import { HomeContext } from '.';
 
 export const useHomeContext = () => {
-    return useContext(HomeContext)
-}
+  return useContext(HomeContext);
+};
