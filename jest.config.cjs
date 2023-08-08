@@ -18,6 +18,7 @@ module.exports = {
     '@/tests/(.*)': '<rootDir>/tests/$1',
     '@/(.*)': '<rootDir>/src/$1',
     '^.+\\.svg': '<rootDir>/mocks/fileMock.jsx',
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
   },
   coverageDirectory: 'reports/coverage',
   collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}'],
