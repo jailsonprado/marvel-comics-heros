@@ -9,6 +9,7 @@ module.exports = {
     '<rootDir>.*styles\\.ts$',
     '<rootDir>/src/main.tsx',
     '<rootDir>*types\\.ts$',
+    '<rootDir>*d\\.ts$',
     '<rootDir>/src/assets/svg/svg-mapped.tsx',
   ],
   testEnvironment: 'jsdom',
@@ -29,6 +30,7 @@ module.exports = {
     '\\.styles\\.tsx$',
     '\\.style\\.ts$',
     '/src/.*styles\\.ts$',
+    '/src/.*d\\.ts$',
   ],
   coverageThreshold: {
     global: {
