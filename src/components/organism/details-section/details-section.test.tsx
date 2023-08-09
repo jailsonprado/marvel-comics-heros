@@ -5,6 +5,7 @@ import { DetailsSection } from './details-section';
 import { addToFavoriteHero } from '@/redux/heros/heros-slice';
 import { CharacterPaylodUnique, Comics } from '@/types/types-response';
 import { waitFor } from '@testing-library/dom';
+import { BrowserRouter } from 'react-router-dom';
 
 const mockStore = configureStore([]);
 const store = mockStore({
@@ -62,12 +63,14 @@ describe('DetailsSection component', () => {
   test('should render DetailsSection component', () => {
     render(
       <Provider store={store}>
-        <DetailsSection
-          hero={mockHero}
-          loading={false}
-          comics={mockComics}
-          loadingData={false}
-        />
+        <BrowserRouter>
+          <DetailsSection
+            hero={mockHero}
+            loading={false}
+            comics={mockComics}
+            loadingData={false}
+          />
+        </BrowserRouter>
       </Provider>,
     );
 
@@ -78,12 +81,14 @@ describe('DetailsSection component', () => {
   test('should call addToFavoriteHero when the add button is clicked', () => {
     render(
       <Provider store={store}>
-        <DetailsSection
-          hero={mockHero}
-          loading={false}
-          comics={mockComics}
-          loadingData={false}
-        />
+        <BrowserRouter>
+          <DetailsSection
+            hero={mockHero}
+            loading={false}
+            comics={mockComics}
+            loadingData={false}
+          />
+        </BrowserRouter>
       </Provider>,
     );
 

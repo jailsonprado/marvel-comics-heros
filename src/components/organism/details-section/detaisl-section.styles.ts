@@ -86,3 +86,37 @@ export const Wrapper = styled.main`
   flex: 1;
   margin-bottom: 60px;
 `;
+
+export const WrapperButton = styled.div`
+  display: flex;
+  width: 60%;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    width: 100%;
+  }
+`;
+
+export const BackButton = styled.div`
+  background-color: #f00;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 15px;
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff0404c6;
+  }
+
+  @media (max-width: 768px) {
+    height: 15px;
+  }
+`;

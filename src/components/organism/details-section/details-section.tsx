@@ -16,6 +16,7 @@ import { InfoSection } from '@/components/molecules/info-section/info-section';
 import { Image } from '@/components/atoms/image/image';
 import { Text } from '@/components/atoms/text/text';
 import { ComicCard } from '@/components/molecules/card-comic/card-comic';
+import { useNavigate } from 'react-router-dom';
 
 interface DetailsSectionProps {
   hero: CharacterPaylodUnique | undefined;
@@ -39,6 +40,8 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
     dispatch(addToFavoriteHero(hero as CharacterPaylod));
   };
 
+  const navigate = useNavigate();
+
   const handleRemoveFavoriteHero = () => {
     dispatch(removeFromFavoriteHero(Number(hero?.id)));
   };
@@ -50,6 +53,11 @@ export const DetailsSection: React.FC<DetailsSectionProps> = ({
       <Loading loading={loading || loadingData} />
       <S.ContentWrapper>
         <S.InfoWrapper>
+          <S.WrapperButton>
+            <S.BackButton onClick={() => navigate('/')}>
+              &laquo; <Text component="span" text="Voltar" marginLeft={10} />
+            </S.BackButton>
+          </S.WrapperButton>
           <DescriptionHero
             handleClick={handleProductClick}
             handleRemove={handleRemoveFavoriteHero}
