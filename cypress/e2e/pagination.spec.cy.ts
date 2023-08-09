@@ -30,7 +30,7 @@ describe('Pagination Test', () => {
   it('should click in next button pagination', () => {
     cy.get('[data-testid="pagination-next"]').click();
 
-    cy.get('[data-testid="pagination-2"]').should(
+    cy.get('[data-testid="pagination-next"]').should(
       'have.attr',
       'active',
       'true',
