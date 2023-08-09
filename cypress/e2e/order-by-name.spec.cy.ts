@@ -2,7 +2,7 @@
 
 describe('Order By Name ', () => {
   it('should click in toogle icon for order by heros Z/A', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[alt="toggle-off-icon"]').should('exist');
     cy.get('[alt="toggle-off-icon"]').click();
@@ -10,7 +10,7 @@ describe('Order By Name ', () => {
   });
 
   it('should click in toogle icon for order by heros A/Z', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[alt="toggle-off-icon"]').should('exist');
     cy.get('[alt="toggle-off-icon"]').click();

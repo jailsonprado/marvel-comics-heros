@@ -2,7 +2,7 @@
 
 describe('CardHero Component', () => {
   it('should toggle the "add favorite" hero icon when clicked', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
       .first()
@@ -12,7 +12,7 @@ describe('CardHero Component', () => {
   });
 
   it('should toggle the "remove favorite" hero icon when clicked', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
       .first()

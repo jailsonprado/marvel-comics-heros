@@ -2,7 +2,7 @@
 
 describe('Page 404 not found', () => {
   it('should navigate to page 404', () => {
-    cy.visit('http://localhost:8080/page');
+    cy.visit('https://marvel-comics-heros.vercel.app/page');
 
     cy.get(
       'img[alt="dead pool surpreso"][src="/src/assets/dead-pool-2.png"]',
@@ -12,6 +12,6 @@ describe('Page 404 not found', () => {
     cy.get('button').contains('Ir para Home').should('exist');
 
     cy.get('button').contains('Ir para Home').click();
-    cy.url().should('eq', 'http://localhost:8080/');
+    cy.url().should('eq', 'https://marvel-comics-heros.vercel.app/');
   });
 });

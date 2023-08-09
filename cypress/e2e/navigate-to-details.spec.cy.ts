@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 describe('Should test click image and navigate', () => {
   it('should click image hero ', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
     cy.get('[alt="image-hero"]').first().click();
   });
 
   it('should add hero to favorite list in page details', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[alt="image-hero"]').first().click();
 
@@ -18,7 +18,7 @@ describe('Should test click image and navigate', () => {
   });
 
   it('should remove hero to favorite list in page details', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[alt="image-hero"]').first().click();
 
@@ -34,7 +34,7 @@ describe('Should test click image and navigate', () => {
   });
 
   it('should click back button in page details', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[alt="image-hero"]').first().click();
 

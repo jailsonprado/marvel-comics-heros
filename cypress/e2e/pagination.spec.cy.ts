@@ -2,7 +2,7 @@
 
 describe('Pagination Test', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
   });
 
   it('should navigate through pagination', () => {

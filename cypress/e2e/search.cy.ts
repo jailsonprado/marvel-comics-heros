@@ -2,7 +2,7 @@
 
 describe('Search Icon and Input', () => {
   it('should perform a search when the search icon is clicked', () => {
-    cy.visit('http://localhost:8080/');
+    cy.visit('https://marvel-comics-heros.vercel.app/');
 
     cy.get('[data-testid="icone-de-busca"]').should('exist');
 
