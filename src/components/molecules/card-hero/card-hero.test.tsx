@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from 'test-utils';
+import { fireEvent, render, screen } from '@/utils/test-utils';
 import { CardHero } from './card-hero';
 import { waitFor } from '@testing-library/dom';
 
@@ -6,7 +6,7 @@ describe('CardHero component', () => {
   const mockProps = {
     id: 1,
     source: 'hero-image.jpg',
-    altImage: 'Hero Image',
+    altImage: 'image-hero',
     legend: 'Hero Legend',
     handleClick: jest.fn(),
     handleRemove: jest.fn(),
@@ -39,7 +39,7 @@ describe('CardHero component', () => {
   it('should call navigateTo when card is clicked', () => {
     render(<CardHero {...mockProps} />);
 
-    const cardElement = screen.getByAltText('Hero Image');
+    const cardElement = screen.getByAltText('image-hero');
     fireEvent.click(cardElement);
 
     waitFor(() => {

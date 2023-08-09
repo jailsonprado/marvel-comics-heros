@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -9,11 +8,7 @@ export default defineConfig({
       external: ['module-name'],
     },
   },
-  server: {
-    proxy: {
-      '/graphql': 'http://localhost:3001',
-    },
-  },
+  base: '/',
   resolve: {
     alias: {
       '@': '/src',

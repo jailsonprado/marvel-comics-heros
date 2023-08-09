@@ -1,4 +1,5 @@
-import { Image, Text } from '../../atoms';
+import { Image } from '@/components/atoms/image/image';
+import { Text } from '@/components/atoms/text/text';
 import { styled } from 'styled-components';
 
 export const Container = styled.div`

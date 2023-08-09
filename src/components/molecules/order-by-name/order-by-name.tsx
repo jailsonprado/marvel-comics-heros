@@ -1,9 +1,10 @@
-import { Text, Image } from '../../atoms';
 import * as S from './order-by-name.styles';
 import { IcHeroiSvg, ToggleOffSvg, ToggleOnSvg } from '@/assets/svg/svg-mapped';
 import { useState } from 'react';
 import { useAppDispatch } from '@/redux/types/types';
 import { toggleActive } from '@/redux/heros/heros-slice';
+import { Image } from '@/components/atoms/image/image';
+import { Text } from '@/components/atoms/text/text';
 
 export const OrderByName: React.FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);

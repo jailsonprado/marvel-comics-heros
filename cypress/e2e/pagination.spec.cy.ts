@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Pagination Test', () => {
   beforeEach(() => {
     cy.visit('http://localhost:8080/');

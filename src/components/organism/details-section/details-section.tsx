@@ -1,5 +1,3 @@
-import { InfoSection, DescriptionHero, ComicCard } from '../../molecules';
-import { Image, Loading, Text } from '../../atoms';
 import * as S from './detaisl-section.styles';
 import { useAppDispatch, useAppSelector } from '@/redux/types/types';
 import {
@@ -12,6 +10,12 @@ import {
   CharacterPaylodUnique,
   Comics,
 } from '@/types/types-response';
+import { Loading } from '@/components/atoms/loading/loading';
+import { DescriptionHero } from '@/components/molecules/description-hero/description-hero';
+import { InfoSection } from '@/components/molecules/info-section/info-section';
+import { Image } from '@/components/atoms/image/image';
+import { Text } from '@/components/atoms/text/text';
+import { ComicCard } from '@/components/molecules/card-comic/card-comic';
 
 interface DetailsSectionProps {
   hero: CharacterPaylodUnique | undefined;

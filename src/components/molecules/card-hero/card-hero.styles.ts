@@ -1,4 +1,4 @@
-import { Image } from '../../atoms';
+import { Image } from '@/components/atoms/image/image';
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -12,8 +12,6 @@ export const Container = styled.div`
   padding: 25px;
   width: 200px;
   min-height: 250px;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 30px;
 
   @media (max-width: 900px) {
@@ -38,7 +36,7 @@ export const TextContainer = styled.div`
 
 export const WrapperImage = styled.div`
   width: 200px;
-  height: 203px;
+  height: 200px;
   background-color: #e92429;
   @media (max-width: 600px) {
     width: 118px;
@@ -48,7 +46,7 @@ export const WrapperImage = styled.div`
 
 export const ImageCard = styled(Image).attrs({
   width: '100%',
-  height: '100%',
+  height: '98%',
   cursor: 'pointer',
   maxHeight: '100%',
 })``;

@@ -1,6 +1,7 @@
+import { Image } from '@/components/atoms/image/image';
 import * as S from './header.styles';
 import { LogoSvg } from '@/assets/svg/svg-mapped';
-import { Text, Image } from '../../atoms';
+import { Text } from '@/components/atoms/text/text';
 
 export const Header: React.FC = () => (
   <S.Header>

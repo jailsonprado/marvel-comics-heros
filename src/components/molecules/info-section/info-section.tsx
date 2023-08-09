@@ -1,10 +1,10 @@
-import { Text } from '../../atoms';
 import {
   AvaliacaoOnSvg,
   IcQuadrinhosSvg,
   IcTrailerSvg,
 } from '@/assets/svg/svg-mapped';
 import * as S from './info-section.styles';
+import { Text } from '@/components/atoms/text/text';
 
 interface Props {
   comicsCount?: number;

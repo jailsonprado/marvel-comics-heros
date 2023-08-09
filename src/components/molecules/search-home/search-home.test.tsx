@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor, act } from '@/test-utils';
+import { render, screen, fireEvent, waitFor, act } from '@/utils/test-utils';
 import { SearchHero } from './search-home';
 
 jest.useFakeTimers();

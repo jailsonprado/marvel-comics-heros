@@ -4,15 +4,15 @@ import {
 } from '@/redux/heros/heros-slice';
 import { useAppDispatch, useAppSelector } from '@/redux/types/types';
 import { CharacterPaylod } from '@/types/types-response';
-import { CardHero } from '../../molecules';
-import * as S from './card-hero.styles';
+import { CardHero } from '../../molecules/card-hero/card-hero';
+import * as S from './card-container.styles';
 import { useNavigate } from 'react-router-dom';
 
 type Props = {
   data: CharacterPaylod[];
 };
 
-export const CardHeroComponent: React.FC<Props> = ({ data }) => {
+export const CardContainer: React.FC<Props> = ({ data }) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { favoriteHero } = useAppSelector(

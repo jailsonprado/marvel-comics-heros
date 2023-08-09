@@ -1,4 +1,4 @@
-import { Text } from '../../atoms';
+import { Text } from '@/components/atoms/text/text';
 import * as S from './footer.styles';
 
 export const Footer: React.FC = () => (

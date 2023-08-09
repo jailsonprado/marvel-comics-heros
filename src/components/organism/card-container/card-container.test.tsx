@@ -1,7 +1,7 @@
 import { CharacterPaylod } from '@/types/types-response';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { CardHeroComponent } from './card-hero';
+import { CardContainer } from './card-container';
 
 import {
   addToFavoriteHero,
@@ -11,7 +11,7 @@ import { waitFor } from '@testing-library/dom';
 import { store } from '@/redux/store';
 import { BrowserRouter } from 'react-router-dom';
 
-describe('CardHeroComponent', () => {
+describe('CardContainer', () => {
   const mockData: CharacterPaylod[] = [
     {
       id: 1,
@@ -33,24 +33,24 @@ describe('CardHeroComponent', () => {
     },
   ];
 
-  test('should render CardHeroComponent', () => {
+  test('should render CardContainer', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <CardHeroComponent data={mockData} key={1} />
+          <CardContainer data={mockData} key={1} />
         </BrowserRouter>
       </Provider>,
     );
 
-    const cardHeroComponent = screen.getByText(/Spider-Man/i);
-    expect(cardHeroComponent).toBeInTheDocument();
+    const Card = screen.getByText(/Spider-Man/i);
+    expect(Card).toBeInTheDocument();
   });
 
   test('should call addToFavoriteHero when the add button is clicked', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <CardHeroComponent data={mockData} key={1} />
+          <CardContainer data={mockData} key={1} />
         </BrowserRouter>
       </Provider>,
     );
@@ -86,7 +86,7 @@ describe('CardHeroComponent', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-          <CardHeroComponent data={mockData} key={1} />
+          <CardContainer data={mockData} key={1} />
         </BrowserRouter>
       </Provider>,
     );

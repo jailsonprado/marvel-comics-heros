@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useMarvelData } from '@/hooks/use-marvel-data/use-marvel-data';
-import { HooksProviders, act, renderHook } from '@/test-utils';
+import { HooksProviders, act, renderHook } from '@/utils/test-utils';
 import { waitFor } from '@testing-library/dom';
 import axios from 'axios';
 

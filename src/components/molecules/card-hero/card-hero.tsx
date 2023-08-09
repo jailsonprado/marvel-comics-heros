@@ -1,7 +1,8 @@
+import { Text } from '@/components/atoms/text/text';
 import * as S from './card-hero.styles';
 
 import { Favorito01Svg, Favorito02Svg } from '@/assets/svg/svg-mapped';
-import { Text, Image } from '../../atoms';
+import { Image } from '@/components/atoms/image/image';
 
 interface CardHeroProps {
   source: string;
@@ -16,7 +17,6 @@ interface CardHeroProps {
 
 export const CardHero: React.FC<CardHeroProps> = ({
   source,
-  altImage,
   legend,
   handleClick,
   handleRemove,
@@ -29,10 +29,10 @@ export const CardHero: React.FC<CardHeroProps> = ({
       <S.Container data-testid="hero-card">
         <S.WrapperImage data-testid="card-image" onClick={() => navigateTo(id)}>
           <S.ImageCard
-            descriptionAlt={altImage}
+            descriptionAlt="image-hero"
             src={source}
             handleClick={() => navigateTo(id)}
-            data-testid="image-hero"
+            dataTestid="image-hero"
           />
         </S.WrapperImage>
         <S.TextContainer>

@@ -1,5 +1,5 @@
 import * as S from './pagination.styles';
-import { calculatePagesToShow } from '../../atoms/pagination/utils/pagination.utils';
+import { calculatePagesToShow } from '@/components/atoms/pagination/utils/pagination.utils';
 
 interface PaginationProps {
   currentPage: number;

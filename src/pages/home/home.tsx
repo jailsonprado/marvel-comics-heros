@@ -1,14 +1,13 @@
-import {
-  Header,
-  Navigation,
-  CardHeroComponent,
-  Footer,
-} from '@/components/organism';
-import { Loading, Pagination } from '@/components/atoms';
-import { SearchHero } from '@/components/molecules';
 import { useMarvelData } from '@/hooks/use-marvel-data/use-marvel-data';
 import { useAppSelector } from '@/redux/types/types';
 import * as S from './styles';
+import { Header } from '@/components/organism/header/header';
+import { SearchHero } from '@/components/molecules/search-home/search-home';
+import { Navigation } from '@/components/organism/navigation/navigation';
+import { CardContainer } from '@/components/organism/card-container/card-container';
+import { Loading } from '@/components/atoms/loading/loading';
+import { Pagination } from '@/components/atoms/pagination/pagination';
+import { Footer } from '@/components/organism/footer/footer';
 
 export const HomePage = () => {
   const {
@@ -37,7 +36,7 @@ export const HomePage = () => {
         <Navigation
           itemPerPage={!onlyFavorite ? totalItems : favoriteHero.length}
         />
-        <CardHeroComponent data={!onlyFavorite ? data : favoriteHero} />
+        <CardContainer data={!onlyFavorite ? data : favoriteHero} />
         <Loading loading={loading} />
         <Pagination
           currentPage={currentPage}
