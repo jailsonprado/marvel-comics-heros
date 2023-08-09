@@ -32,4 +32,18 @@ describe('Should test click image and navigate', () => {
 
     cy.get('img[alt="favorite logo add"]').should('exist');
   });
+
+  it('should click back button in page details', () => {
+    cy.visit('http://localhost:8080/');
+
+    cy.get('[alt="image-hero"]').first().click();
+
+    cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
+      .first()
+      .click();
+
+    cy.get('span').contains('Voltar').should('exist');
+
+    cy.get('span').contains('Voltar').click();
+  });
 });
