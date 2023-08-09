@@ -10,9 +10,7 @@ describe('Should test click image and navigate', () => {
 
     cy.get('[alt="image-hero"]').first().click();
 
-    cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
-      .first()
-      .click();
+    cy.get('[alt="favorite logo add"]').first().click();
 
     cy.get('img[alt="favorite logo remove"]').should('exist');
   });
@@ -22,13 +20,9 @@ describe('Should test click image and navigate', () => {
 
     cy.get('[alt="image-hero"]').first().click();
 
-    cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
-      .first()
-      .click();
+    cy.get('[alt="favorite logo add"]').first().click();
 
-    cy.get('img[alt="favorite logo remove"][src="/src/assets/favorito_01.svg"]')
-      .first()
-      .click();
+    cy.get('[alt="favorite logo remove"]').first().click();
 
     cy.get('img[alt="favorite logo add"]').should('exist');
   });
@@ -38,9 +32,7 @@ describe('Should test click image and navigate', () => {
 
     cy.get('[alt="image-hero"]').first().click();
 
-    cy.get('img[alt="favorite logo add"][src="/src/assets/favorito_02.svg"]')
-      .first()
-      .click();
+    cy.get('img[alt="favorite logo add"]').first().click();
 
     cy.get('span').contains('Voltar').should('exist');
 
