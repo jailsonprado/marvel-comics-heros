@@ -26,8 +26,8 @@ export const HookProvider = ({ children }: HookProps) => {
 
   const timeApi = Number(new Date());
 
-  const privateKey = 'a2d0927ae7143a3ab8c7b7b6b6993b3b27250fe4';
-  const publicKeyApi = 'b3880a065a6984f95c2e51cdbdc9cc5a';
+  const privateKey = '4b68c34968ff1590ccbff2014b0b155d89ab4add';
+  const publicKeyApi = 'c2f121d2b9742e418594ffa5adf6a5f4';
   const hashApi = md5(timeApi + privateKey + publicKeyApi);
 
   useEffect(() => {
