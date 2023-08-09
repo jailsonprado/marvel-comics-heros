@@ -38,7 +38,15 @@ Inicie o servidor
 ## Stack utilizada
 
 **Front-end:** React, Vite, Typescript, Redux, Redux Toolkit, Axios, Styled-components...
+
 **Tests unitários/componentes:** Jest, React Library Testing...
+
+## **Ferramentas para qualidade de codigo:**
+
+- Husky (verifica se o commit segue o padrão do conventional commits) - obrigatório
+- npm run lint e npm run test pre-commit
+- Bloqueio de commit se houver qualquer erro nos testes unitários.
+- Regras de EsLint e Prettier garantindo um bom código.
 
 **Teste e2e:** Cypress
 
