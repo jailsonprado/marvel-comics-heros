@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 8080",
-    "build": "npm run test:e2e   && tsc && vite build",
+    "build": "npm run test tsc && vite build",
     "test": "jest",
     "test:e2e": "npx cypress run",
     "test:coverage": "yarn run test --coverage --watchAll=false ",
