@@ -17,6 +17,7 @@ import SearchPng from '@/assets/search.png';
 import ToggleOffSvg from '@/assets/toggle_off.svg';
 import ToggleOnSvg from '@/assets/toggle_on.svg';
 import DeadPool from '@/assets/dead-pool.png';
+import DeadPool2 from '@/assets/dead-pool-2.png';
 
 export {
   AvaliacaoOffSvg,
@@ -37,4 +38,5 @@ export {
   ToggleOffSvg,
   ToggleOnSvg,
   DeadPool,
+  DeadPool2,
 };
