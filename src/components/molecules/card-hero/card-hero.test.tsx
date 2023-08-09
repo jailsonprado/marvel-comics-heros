@@ -12,6 +12,7 @@ describe('CardHero component', () => {
     handleRemove: jest.fn(),
     navigateTo: jest.fn(),
     isFavorited: false,
+    disabled: false,
   };
 
   it('should render the CardHero component with the correct props', () => {
@@ -55,5 +56,16 @@ describe('CardHero component', () => {
     fireEvent.click(favoriteLogoElement);
 
     expect(mockProps.handleRemove).toHaveBeenCalledTimes(1);
+  });
+  it('should not call handleClick when favorite logo is clicked and button is disabled', () => {
+    const disabledProps = { ...mockProps, disabled: true };
+    render(<CardHero {...disabledProps} />);
+
+    const favoriteLogoElement = screen.getByAltText('favorite logo add');
+    fireEvent.click(favoriteLogoElement);
+
+    waitFor(() => {
+      expect(mockProps.handleClick).not.toHaveBeenCalled();
+    });
   });
 });

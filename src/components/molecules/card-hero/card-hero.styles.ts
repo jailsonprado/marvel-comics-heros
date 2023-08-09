@@ -50,3 +50,11 @@ export const ImageCard = styled(Image).attrs({
   cursor: 'pointer',
   maxHeight: '100%',
 })``;
+
+export const Button = styled.button`
+  width: 30px;
+  height: 30px;
+  margin-top: 30px;
+  background-color: transparent;
+  border: none;
+`;
