@@ -47,6 +47,7 @@ export const CardContainer: React.FC<Props> = ({ data }) => {
               handleClick={() => handleProductClick(item)}
               handleRemove={() => handleRemoveFavoriteHero(item)}
               isFavorited={isFavorited}
+              disabled={favoriteHero.length >= 5}
               data-testid="card-hero"
               id={item.id}
               navigateTo={() => handleCardClick(item.id)}
