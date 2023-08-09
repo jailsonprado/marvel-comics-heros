@@ -11,13 +11,9 @@ export const SearchHeroDetails: React.FC<NavBarProps> = ({
   placeholder,
 }) => {
   return (
-    <S.StyledSearch>
+    <S.StyledSearch onClick={handleChange}>
       <S.SearchIcon src={IcBuscaMenorSvg} data-testid="icone-de-busca" />
-      <S.SearchInput
-        onClick={handleChange}
-        data-testid="search"
-        placeholder={placeholder}
-      />
+      <S.SearchInput data-testid="search" placeholder={placeholder} disabled />
     </S.StyledSearch>
   );
 };
