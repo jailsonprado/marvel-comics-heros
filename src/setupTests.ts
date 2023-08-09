@@ -15,4 +15,5 @@ jest.mock('@/assets/svg/svg-mapped', () => ({
   IcBuscaMenorSvg: 'ic_busca_menor.svg',
   DeadPool: 'deadpool.png',
   LogoMenorSvg: 'logo_menor.svg',
+  DeadPool2: 'deadpool-2.png',
 }));
