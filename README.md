@@ -1,6 +1,21 @@
 # Marvel Search Hero
 
 Aplicação feita para buscar seus heróis e tambem favoritar eles.
+- Listagem de heróis
+- Busca por nome de herois
+- Ordenação por A/Z
+- Paginação 
+- Favoritar até 5 heróis
+- Mensagem de no maximo 5 herois favoritos
+- listar favoritos
+- Tratamento de lsta de favoritos vazia
+- Tela 404 not found
+- layout responsivo
+- EsLint e Prettier
+- Testes unitários com Jest com 95% de cobertura
+- Testes e2e de todas as funcionaliades com Cypres.
+- Deploy em vercel ( automatizado com git push)
+
 
 ## Rodando localmente
 
@@ -68,6 +83,9 @@ Para rodar os testes e2e , rode o seguinte comando
 ## Referência
 
 - [Marvel API Docs](https://developer.marvel.com/)
+- [Convetional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+
+
 
 ## Licença
 
