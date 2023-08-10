@@ -15,6 +15,7 @@ Aplicação feita para buscar seus heróis e tambem favoritar eles.
 - Testes unitários com Jest com 95% de cobertura
 - Testes e2e de todas as funcionaliades com Cypres.
 - Deploy em vercel ( automatizado com git push)
+- CI/CD com Git Actions
 
 
 ## Rodando localmente
