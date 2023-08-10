@@ -1,4 +1,4 @@
-name: Deploy
+name: CI/CD MARVEL COMICS
 
 on:
   push:
@@ -23,7 +23,12 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install
+          
+      - name: Run unit tests
+        run: yarn run test 
 
+      - name: Run e2e tests
+        run: yarn run test:e2e 
       - name: Build project
         run: yarn build
 
