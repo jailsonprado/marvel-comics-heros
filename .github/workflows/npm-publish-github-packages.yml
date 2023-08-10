@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Run unit tests
         run: yarn run test
 
@@ -53,12 +56,15 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Run e2e tests
         run: yarn run test:e2e
 
   build:
     name: Build Project
-    needs: install
+    needs: [unit-tests, e2e-tests, install] 
     runs-on: ubuntu-latest
 
     steps:
@@ -69,6 +75,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
+
+      - name: Install dependencies
+        run: yarn install
 
       - name: Build project
         run: yarn build
