@@ -12,20 +12,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      
+        
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
-          
+          node-version: '16' 
+
       - name: Install dependencies
         run: yarn install
         
@@ -35,7 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         env:
-          KEY_DEPLOY_COMICS: ${{ secrets.DEPLOY_MARVEL }}
+          KEY_DEPLOY_COMICS: ${{ secrets.KEY_DEPLOY_COMICS }}
         with:
-          github_token: ${{ secrets.DEPLOY_MARVEL }}
+          github_token: ${{ secrets.KEY_DEPLOY_COMICS }}
           publish_dir: ./dist
