@@ -6,37 +6,72 @@ on:
       - master
 
 jobs:
-  build:
-    name: Build
+  install:
+    name: Install Dependencies
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set Node.js 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 16.x
 
-      - name: Run install
-        uses: borales/actions-yarn@v4
+      - name: Install dependencies
+        run: yarn install
+
+  unit-tests:
+    name: Unit Tests
+    needs: install
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          cmd: install
-          
+          node-version: 16.x
+
       - name: Run unit tests
-        run: yarn run test 
+        run: yarn run test
+
+  e2e-tests:
+    name: E2E Tests
+    needs: install
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
 
       - name: Run e2e tests
-        run: yarn run test:e2e 
+        run: yarn run test:e2e
+
+  build:
+    name: Build Project
+    needs: install
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
       - name: Build project
         run: yarn build
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
 
   deploy:
     name: Deploy
@@ -46,7 +81,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
         with:
           name: production-files
           path: ./dist
