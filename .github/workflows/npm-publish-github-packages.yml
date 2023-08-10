@@ -33,7 +33,7 @@ jobs:
         run: yarn build
         
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: jailsonprado/github-pages-deploy-action@releases/v3
         env:
           KEY_DEPLOY_COMICS: ${{ secrets.KEY_DEPLOY_COMICS }}
         with:
