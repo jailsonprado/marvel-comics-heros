@@ -5,6 +5,9 @@ export const Container = styled.div`
   max-width: 100%;
   min-height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 `;
 
 export const Wrapper = styled.main`
@@ -14,4 +17,5 @@ export const Wrapper = styled.main`
   flex-direction: column;
   flex: 1;
   margin-bottom: 60px;
+  width: 100%;
 `;
