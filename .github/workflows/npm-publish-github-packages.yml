@@ -35,6 +35,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install    
 
       - name: Run unit tests
         run: yarn run test
@@ -52,6 +57,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
 
       - name: Run e2e tests
         run: yarn run test:e2e
