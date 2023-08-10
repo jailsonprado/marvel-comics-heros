@@ -109,6 +109,9 @@ Error generating stack: `+i.message+`
   max-width: 100%;
   min-height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 `,e2=R.main`
   display: flex;
   justify-content: center;
@@ -116,6 +119,7 @@ Error generating stack: `+i.message+`
   flex-direction: column;
   flex: 1;
   margin-bottom: 60px;
+  width: 100%;
 `,Se=({src:e,descriptionAlt:t,handleClick:n,...r})=>w.jsx("img",{alt:t,src:e,style:r,onClick:n}),t2=R.header`
   display: flex;
   justify-content: center;
