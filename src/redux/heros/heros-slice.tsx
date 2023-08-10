@@ -26,6 +26,7 @@ const initialState: HeroSliceProps = {
   favoriteHero: loadFavoriteHeroFromLocalStorage(),
   idHero: 0,
 };
+const MAX_FAVORITE_HEROES = 5;
 
 const heroSlice = createSlice({
   name: 'hero',
@@ -42,8 +43,9 @@ const heroSlice = createSlice({
       const isDuplicate = state.favoriteHero.some(
         (item) => item.id === movie.id,
       );
+      const hasReachedLimit = state.favoriteHero.length >= MAX_FAVORITE_HEROES;
 
-      if (!isDuplicate) {
+      if (!isDuplicate && !hasReachedLimit) {
         state.favoriteHero.push({
           id: movie.id,
           name: movie.name,
