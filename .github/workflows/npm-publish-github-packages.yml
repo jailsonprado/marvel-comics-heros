@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         env:
-          KEY_DEPLOY_COMICS: ${{ secrets.KEY_DEPLOY_COMICS }}
+          KEY_DEPLOY_COMICS: ${{ secrets.DEPLOY_MARVEL }}
         with:
-          github_token: ${{ secrets.KEY_DEPLOY_COMICS }}
+          github_token: ${{ secrets.DEPLOY_MARVEL }}
           publish_dir: ./dist
