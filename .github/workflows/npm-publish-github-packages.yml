@@ -36,9 +36,6 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependencies
-        run: yarn install
-
       - name: Run unit tests
         run: yarn run test
 
@@ -56,9 +53,6 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependencies
-        run: yarn install
-
       - name: Run e2e tests
         run: yarn run test:e2e
 
@@ -74,11 +68,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
 
       - name: Build project
-        run: yarn run build
+        run: yarn build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
