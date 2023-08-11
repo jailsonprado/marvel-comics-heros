@@ -19,6 +19,6 @@ export const PageButton = styled.button<{ active: string }>`
 
   &:hover {
     background-color: ${(props) =>
-      props.active === 'true' ? '#0056b3' : '#f0f0f0'};
+      props.active === 'true' ? '#E92429' : '#f0f0f0'};
   }
 `;
