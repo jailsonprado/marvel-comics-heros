@@ -308,7 +308,7 @@ Error generating stack: `+i.message+`
   cursor: pointer;
 
   &:hover {
-    background-color: ${e=>e.active==="true"?"#0056b3":"#f0f0f0"};
+    background-color: ${e=>e.active==="true"?"#E92429":"#f0f0f0"};
   }
 `;function F2(e,t,n){const r=Math.floor(n/2),o=Math.max(1,e-r),i=Math.min(t,e+r);return Array.from({length:i-o+1},(l,u)=>o+u)}const U2=({currentPage:e,totalPages:t,onPageChange:n})=>{const o=F2(e,t,5),i=l=>{n(l)};return w.jsxs(M2,{"data-testid":"pagination-container",children:[e>1&&w.jsx(Vu,{active:"true",onClick:()=>i(e-1),"data-testid":"pagination-previous",children:"«"}),o.map(l=>w.jsx(Vu,{active:e===l?"true":"false",onClick:()=>i(l),"data-testid":`pagination-${l}`,children:l},l)),e<t&&w.jsx(Vu,{active:"true",onClick:()=>i(e+1),"data-testid":"pagination-next",children:"»"})]})},B2=j.footer`
   display: flex;
